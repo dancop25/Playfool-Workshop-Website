@@ -13,7 +13,7 @@ Grad. Purple: #381c3e
 		margin: 0;
 		padding: 0;
 		border: 0;
-		font-size: 62.5%;
+		font-size: 100%;
 		font: inherit;
 		line-height: 0;
 		vertical-align: baseline;
@@ -55,7 +55,7 @@ Grad. Purple: #381c3e
 
 	p { 
 		/*background-color: lightgrey;*/
-		font-size: 2em;
+		font-size: 1.7em;
 		line-height: 170%;
 		margin: 0 0 1em 0;
 	}
@@ -104,7 +104,7 @@ Grad. Purple: #381c3e
 
 	strong, b {
 		color: #fff;
-		font-weight: 800;
+		font-weight: 700;
 	}
 
 	em, i {
@@ -147,12 +147,12 @@ Grad. Purple: #381c3e
 		}
 
 	h3 {
-		/*background-color: lightgreen;*/
 		font-family: "sofia-pro";
 		font-size: 2.1em;
 		font-weight: 600;
 		letter-spacing: 0.07em;
 	}
+
 
 /* Colour Change */
 
@@ -270,7 +270,7 @@ Grad. Purple: #381c3e
 	}
 
 		.block_inner > *:nth-child(n){
-				margin: 0 auto 8rem auto;
+				margin: 0 auto 6rem auto;
 			}
 
 			.block_inner > *:last-child{
@@ -446,7 +446,6 @@ Grad. Purple: #381c3e
 				margin: 0 0 5rem 0;
 			}
 
-
 			#banner .titleInner h2{
 				font-size: 2.75em;
 			}
@@ -553,7 +552,7 @@ Grad. Purple: #381c3e
 		}
 
 		.bgVidWrapper #bgVid {
-		  	position: fixed;
+		  	position: absolute;
 		    top: 50%;
 		    left: 50%;
 		    min-width: 100%;
@@ -662,108 +661,171 @@ Grad. Purple: #381c3e
 	}
 
 
-/* FAQ */
+/* Course */
 
-.question_answer {
-	width: 100%;
-	display: inline-block;
-}
-
-	.qa_inner {
-		-moz-align-items: center;
-		-webkit-align-items: center;
-		-ms-align-items: center;
-		align-items: center;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
+	.course_inner {
+		padding: 4em;
 	}
 		
-		.qa_inner:nth-child(1) {
-			margin: 0 0 5em 0;
+		.course_inner.facilitator {
+			background-color: #f32d83;
+			margin: 0 0 4em 0 !important;
 		}
 
-		.Q, .A {
-			display: block;
-			float: left;
-			text-align: center;
-			width: 10em;
+		.course_inner.workshop {
+			border: 0.3rem solid #f32d83;
+			box-sizing: border-box;
 		}
 
-			.Q::after, .A::after {
-				display: inline-block;
+
+		.course_text {
+			margin: 0 0 4em 0;
+		}
+
+			.course_headline {
 				font-family: "sofia-pro";
-				font-size: 10em;
-				font-weight: 700;
-				line-height: 0.57em;
-				padding-bottom: 0.14em;
+				font-size: 3.5em;
+				font-weight: 600;
+				line-height: 100%;
+				margin: 0 0 3rem 0;
 			}
-			
-				.Q::after { content: "Q"; }
-				.A::after { content: "A"; }
 
-		.qa_text {
-			float: right;
-			margin: 0 0 0 2em;
-			width: 100%;
+		.book_button {
+		    border: none;
+		    padding: 2rem 6rem;
+		    text-align: center;
+		    text-decoration: none;
+		    display: block;
+		    cursor: pointer;
+		    border-radius: 100rem;
+		    margin: 0 auto;
 		}
 
+			.facilitator .book_button {
+				background-color: #ffffff;
+			}
 
-/* Footer */
+			.workshop .book_button {
+				background-color: #f32d83;
+			}
 
-	#footer {
-		background: #503157;
-		background: -webkit-linear-gradient(left top, #381c3e, #503157); 
-		background: -o-linear-gradient(bottom right, #381c3e, #503157); 
-		background: -moz-linear-gradient(bottom right, #381c3e, #503157);
-		background: linear-gradient(to bottom right, #381c3e, #503157);
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		-moz-flex-direction: column;
-		-webkit-flex-direction: column;
-		-ms-flex-direction: column;
-		flex-direction: column;
-		-moz-justify-content: center;
-		-webkit-justify-content: center;
-		-ms-justify-content: center;
-		justify-content: center;
-		text-align: center;
-		height: 20em;
-		padding: 0 6em;
+			.book_button p {
+				font-family: "sofia-pro";
+				font-size: 2em;
+				font-weight: 600;
+				line-height: 60%;
+				padding: 0 0 0.3rem 0;
+			}
+
+	.image {
+		width: 100%;
+		display: block;
 	}
 
-
-		@media screen and (max-width: 1024px) {
-				
-			#footer {
-				height: 16em;
-			}
-
+		.image img {
+			width: 100%
 		}
 
-		@media screen and (max-width: 768px) {
 
-			#footer {
-				padding: 0 3em;
-			}
+/* Pricing */
 
+
+	.course {
+		background-color: lightgreen;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		padding-left: 328px;
+	}
+
+	.course_table_headline {
+		font-family: "sofia-pro";
+		font-size: 3.5em;
+		font-weight: 600;
+		line-height: 100%;
+		margin: 0 0 3rem 0;
+		text-align: center;
+		background-color: lightblue;
+	}
+
+		.course_list {
+			background-color: pink;
+			/*position: relative;*/
 		}
 
-		@media screen and (max-width: 768px)
-		and (orientation : portrait),
-		screen and (max-width: 568px) {
-			
-			#footer {
-				height: 10em;
+			.course_list dt:nth-of-type(odd),
+			.course_list dd:nth-of-type(odd) {
+				/*background-color: #f5f5f5;*/
 			}
 
+			.course_list dt {
+				display: inline-block;
+				float: left;
+				/*position: absolute;*/
+				left: -329px;
+				/*width: 328px;*/
+				height: 66px;
+				/*padding-right: 30px;*/
+				/*padding-left: 30px;*/
+				font-size: 1.8rem;
+				line-height: 66px;
+			}
+
+			.course_list dd {
+				float: left;
+				/* Below is code just so check mark sits in the centre */
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-direction: column;
+				flex-direction: column;
+				-webkit-align-items: center;
+				align-items: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+
+				height: 66px;
+				line-height: 66px;
+				text-align: center;
+			}
+
+	.course_check {
+		position: relative;
+		display: block;
+		width: 36px;
+		height: 36px;
+		border-radius: 36px;
+		margin: auto;
+		border: 1px solid #bababa;
+	}
+
+		.course_check.is-checked {
+			border-color: #bababa;
+			background-color: #bababa;
 		}
 
-		#footer .inner{
-			/*background-color: lightgrey;*/
+			.course_check.is-checked::before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 18px;
+				height: 12px;
+				border-left: 3px solid #fff;
+				border-bottom: 3px solid #fff;
+				-webkit-transform: translate(-50%, -50%) translateY(-2px) rotate(-45deg);
+				transform: translate(-50%, -50%) translateY(-2px) rotate(-45deg);
+			}
+
+
+/* FAQ */
+
+	.question_answer {
+		width: 100%;
+		display: inline-block;
+	}
+
+		.qa_inner {
 			-moz-align-items: center;
 			-webkit-align-items: center;
 			-ms-align-items: center;
@@ -772,52 +834,113 @@ Grad. Purple: #381c3e
 			display: -webkit-flex;
 			display: -ms-flex;
 			display: flex;
-			margin: 0 auto;
-			text-align: left;
-			max-width: 55em;
-			width: 100%;
 		}
+			
+			.qa_inner:nth-child(1) {
+				margin: 0 0 5em 0;
+			}
 
-			#footer .inner .content {
-				margin: -0.5em 0 0 0;
+			.Q, .A {
+				display: block;
 				float: left;
+				text-align: center;
+				width: 10em;
 			}
 
-				#footer .inner .content .email {
-					color: #f32d83; 	    
+				.Q::after, .A::after {
+					display: inline-block;
+					font-family: "sofia-pro";
+					font-size: 10em;
+					font-weight: 700;
+					line-height: 0.57em;
+					padding-bottom: 0.14em;
 				}
+				
+					.Q::after { content: "Q"; }
+					.A::after { content: "A"; }
 
-			#footer .inner .image {
+			.qa_text {
+				float: right;
+				margin: 0 0 0 2em;
 				width: 100%;
 			}
 
-				#footer .inner .image img{
-					width: 12em;
-					float: right;
-				}
-		
-		@media screen and (max-width: 1024px) {
 
-			#footer .inner .image img{
-				width: 9em;
-			}
+/* Footer */
 
+	#footer {
+		background-color: #ffffff;
+		padding: 3rem 4rem;
+	}
+
+	.footer_content {
+		position: relative;
+	}
+
+		.nav-footer {
+			display: inline-block;
+			margin: 0 0 0 auto;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
 		}
 
-		@media screen and (max-width: 768px)
-		and (orientation : portrait),
-		screen and (max-width: 568px) {
+			.nav-footer ul {
+			    font-size: 0;
+			    letter-spacing: -1em;
+			    word-spacing: -1em;
+			}
 
-			#footer .inner .content {
-				margin: 0;
-				width: 100%;
+			.nav-footer li {
+			    display: inline-block;
+			    font-size: 1.5rem;
+			    letter-spacing: normal;
+			    word-spacing: normal;
+			    vertical-align: top;
+			}
+
+				.nav-footer li:not(:first-child)::before {
+			    	content: "｜";
+				}
+
+			.nav-footer a {
+				border-bottom: none;
+			}
+		
+		.logos {
+			display: inline-block;
+		}
+
+		.playfool_logo {
+			height: 6em;
+			line-height: 0;
+			margin: 0 3em 0 0;
+		}
+		
+		.mimicry_logo {
+			height: 4em;
+			-webkit-transform: translateY(-25%);
+			transform: translateY(-25%);
+		}
+
+
+		@media screen and (max-width: 768px) {
+			
+			.footer_content {
 				text-align: center;
 			}
 
-			#footer .inner .image {
-				display: none;
-			}
+				.logos {
+					margin: 2em 0 0 0;
+				}
 
+				.nav-footer {
+					display: block;
+					position: static;
+					transform: none;
+				}
 		}
 
 
