@@ -15,6 +15,7 @@ Grad. Purple: #381c3e
 		border: 0;
 		font-size: 62.5%;
 		font: inherit;
+		line-height: 0;
 		vertical-align: baseline;
 	}
 
@@ -59,7 +60,7 @@ Grad. Purple: #381c3e
 		margin: 0 0 1em 0;
 	}
 
-		p:last-child {
+		p:not(.qa_text):last-child {
 			margin: 0;
 		}
 
@@ -269,7 +270,7 @@ Grad. Purple: #381c3e
 	}
 
 		.block_inner > *:nth-child(n){
-				margin: 0 auto 4rem auto;
+				margin: 0 auto 8rem auto;
 			}
 
 			.block_inner > *:last-child{
@@ -327,11 +328,8 @@ Grad. Purple: #381c3e
 
 /* Squiggly Line */
 
-	.squiggly {
-		/*background-color: lightgrey;*/
+	.squiggly_line {
 		opacity: 0.5;
-		margin: 8rem auto;
-		display: block;
 	}
 		
 /* Detail Boxes */
@@ -412,8 +410,6 @@ Grad. Purple: #381c3e
 					}
 
 		}
-
-
 
 
 /* Banner */
@@ -664,6 +660,54 @@ Grad. Purple: #381c3e
 				}
 
 	}
+
+
+/* FAQ */
+
+.question_answer {
+	width: 100%;
+	display: inline-block;
+}
+
+	.qa_inner {
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+	}
+		
+		.qa_inner:nth-child(1) {
+			margin: 0 0 5em 0;
+		}
+
+		.Q, .A {
+			display: block;
+			float: left;
+			text-align: center;
+			width: 10em;
+		}
+
+			.Q::after, .A::after {
+				display: inline-block;
+				font-family: "sofia-pro";
+				font-size: 10em;
+				font-weight: 700;
+				line-height: 0.57em;
+				padding-bottom: 0.14em;
+			}
+			
+				.Q::after { content: "Q"; }
+				.A::after { content: "A"; }
+
+		.qa_text {
+			float: right;
+			margin: 0 0 0 2em;
+			width: 100%;
+		}
 
 
 /* Footer */

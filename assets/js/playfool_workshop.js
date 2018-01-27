@@ -1,8 +1,7 @@
 $(document).ready(function() { 
 
 	var $window = $(window),
-    $innerBox = $(".innerBox"),
-    $squigCanvas,
+    $block_inner = $(".block_inner"),
 	
 	lineWidth,
 	frequency,
@@ -15,9 +14,7 @@ $(document).ready(function() {
 
 	// Redraw Squiggly Line on browser resize. 
 	$window.resize(function () {
-        drawSquigglyLine(".squig1");
-		drawSquigglyLine(".squig2");
-		drawSquigglyLine(".shortSquig1");
+        drawSquigglyLine();
     });
 
 	CanvasRenderingContext2D.prototype.wavy = function(from, to, frequency, amplitude, step, negative) 
@@ -41,34 +38,36 @@ $(document).ready(function() {
 		}
 	}
 
-	function drawSquigglyLine(squigClass) {
-		$squigCanvas = $(squigClass);
-		lineWidth = 5;
-		amplitude = 5;
-		squiggleHeight = (amplitude * 2) + lineWidth + 1;
 
-		if (squigClass == ".shortSquig1") {
-			$squigCanvas.css('width', 175);
-		} else {
-			$squigCanvas.css('width', $innerBox.width());
-		}
-		$squigCanvas.css('height', squiggleHeight);
-		frequency = $squigCanvas.width() * (1/26);
+	function drawSquigglyLine() {
+		$(".squiggly_line").each(function(i, data) {
+			lineWidth = 5;
+			amplitude = 5;
+			squiggleHeight = (amplitude * 2) + lineWidth + 1;
 
-		var ctx = $squigCanvas[0].getContext('2d');
-	    ctx.canvas.width  = $squigCanvas.width()*2;
-		ctx.canvas.height = $squigCanvas.height()*2;
-		ctx.scale(2,2);		// Double the dimensions for higher resolution.
+			// if (squigClass == ".shortSquig1") {
+			// 	$squigCanvas.css('width', 175);
+			// } else {
+			// 	$squigCanvas.css('width', $block_inner.width());
 
-		// ctx.lineCap = 'round';
-		ctx.lineWidth = lineWidth;
-		ctx.strokeStyle = "#f32d83";
-		ctx.beginPath();
-		ctx.wavy(p(lineWidth/2, $squigCanvas.height()/2), p($squigCanvas.width()-(lineWidth/2), $squigCanvas.height()/2), frequency, amplitude, 1);	
-		ctx.stroke();
-	}
-	drawSquigglyLine(".squig1");
-	drawSquigglyLine(".squig2");
-	drawSquigglyLine(".shortSquig1");
+			$(this).css('width', $block_inner.width());
+			$(this).css('height', squiggleHeight);
+			frequency = $(this).width() * (1/26);
+
+			var ctx = $(this)[0].getContext('2d');
+		    ctx.canvas.width  = $(this).width()*2;
+			ctx.canvas.height = $(this).height()*2;
+			ctx.scale(2,2);		// Double the dimensions for higher resolution.
+
+			// ctx.lineCap = 'round';
+			ctx.lineWidth = lineWidth;
+			ctx.strokeStyle = "#f32d83";
+			ctx.beginPath();
+			ctx.wavy(p(lineWidth/2, $(this).height()/2), p($(this).width()-(lineWidth/2), $(this).height()/2), frequency, amplitude, 1);	
+			ctx.stroke();
+		});
+	};
+	drawSquigglyLine();
+
 
 })(jQuery);
