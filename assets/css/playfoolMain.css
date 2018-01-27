@@ -287,20 +287,20 @@ Grad. Purple: #381c3e
 
 /* Title Block */
 
-	.titleBlock {
+	.title_block {
 		margin: 0 0 6rem 0 !important;
 	}
 		
-		.titleBlock h1{
+		.title_block h1{
 			margin: 0 0 4rem 0;
 		}
 
-		.titleBlock h2 {
+		.title_block h2 {
 			line-height: 6rem;
 			margin: -1.5rem 0 -1.5rem 0;
 		}
 
-		.titleBlock:after {
+		.title_block:after {
 			background-color: #503157;
 			content: "";
 			display: block;
@@ -310,18 +310,18 @@ Grad. Purple: #381c3e
 			width: 5rem;	
 		}
 
-			.titleBlock.white:after{
+			.title_block.white:after{
 				background-color: #ffffff;
 			}
 
 
-		.titleBlock.centre {
+		.title_block.centre {
 			/*background-color: darkgrey;*/
 			margin: 0 0 4rem 0;
 			text-align: center;
 		}
 
-			.titleBlock.centre:after {
+			.title_block.centre:after {
 				margin: 4rem auto 0 auto;
 			}
 
@@ -434,23 +434,25 @@ Grad. Purple: #381c3e
 		text-align: center;
 	}
 
-		/* Playfool Title */
+	
+	/* Playfool Title */
 
-		#banner .titleInner {
+		.main_title_inner {
 			/*background-color: lightgrey;*/
 			max-width: 80em;
 			margin: 0 auto;
+			padding: 0 1.5em;
 		}
 
-			#banner .titleInner *:nth-child(1){
+			.main_title_inner *:nth-child(1){
 				margin: 0 0 5rem 0;
 			}
 
-			#banner .titleInner h2{
+			.main_title_inner h2{
 				font-size: 2.75em;
 			}
 
-			#banner .titleInner .logo {
+			.main_title_inner .logo {
 				display: inline-block;
 				opacity: 1;
 				outline: 1px solid transparent;
@@ -467,7 +469,7 @@ Grad. Purple: #381c3e
 				z-index: 1;
 			}
 
-		#banner .scroll {			
+		.scroll {			
 			bottom: 3.5em;
 			height: auto;
 			margin: 0 auto;
@@ -489,7 +491,7 @@ Grad. Purple: #381c3e
 			width: 100%;
 		}
 
-			#banner .scroll:after {
+			.scroll:after {
 				background-image: url("../../images/pinkArrow.png");
 				background-position: center;
 				background-repeat: no-repeat;
@@ -504,7 +506,7 @@ Grad. Purple: #381c3e
 			
 		@media screen and (max-width: 768px) {
 
-			#banner .logo {
+			.logo {
 				width: 20em;
 			}
 
@@ -528,13 +530,13 @@ Grad. Purple: #381c3e
 
 	/* Video Background */
 
-	.bgVidWrapper {
+	.video_bg {
 		position: absolute;
 		width: 100%;
 		height: 100%;
 	}
 
-		.bgVidWrapper::after {
+		.video_bg::after {
 			background: #ffffff;
 /*			background: #503157;
 			background: -webkit-linear-gradient(left top, #381c3e, #503157); 
@@ -551,7 +553,7 @@ Grad. Purple: #381c3e
 			z-index: -1;
 		}
 
-		.bgVidWrapper #bgVid {
+		.video_bg #bgVid {
 		  	position: absolute;
 		    top: 50%;
 		    left: 50%;
