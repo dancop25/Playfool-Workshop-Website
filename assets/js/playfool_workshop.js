@@ -2,11 +2,13 @@ $(document).ready(function() {
 
 	var $window = $(window),
     $block_inner = $(".block_inner"),
-	
+    $course_desc_workshop = $(".-workshop > .course_desc"),
+    $course_desc_facilitator = $(".-facilitator > .course_desc"),
 	lineWidth,
 	frequency,
 	amplitude,
 	squiggleHeight,
+
 	
 	p = function (x,y) {
 		return { x:x, y:y };
@@ -15,7 +17,16 @@ $(document).ready(function() {
 	// Redraw Squiggly Line on browser resize. 
 	$window.resize(function () {
         drawSquigglyLine();
+        changeWorkshopHeight();
     });
+
+	
+	function changeWorkshopHeight() {
+		var facilitator_height = $course_desc_facilitator.css('height');
+	    $course_desc_workshop.css('height', facilitator_height);
+	}
+	changeWorkshopHeight();
+
 
 	CanvasRenderingContext2D.prototype.wavy = function(from, to, frequency, amplitude, step, negative) 
 	{ 
