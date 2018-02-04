@@ -42,7 +42,7 @@ time, mark, audio, video {
 
 
 /* --------------------------------------------------
- 02: Basic Style
+ 01: Basic Style
  -------------------------------------------------- */
 
 *,
@@ -95,25 +95,24 @@ body {
 	}
 
 p { 
-	font-size: 1.7em;
-	line-height: 170%;
-	margin-bottom: 10px;
+	font-size: 1.8em;
+	line-height: 1.7;
 }
 
-	p:not(.qa_text):last-child {
-		margin: 0;
+	.p-spacing p:not(:last-child) {
+		margin-bottom: 25px;
 	}
 
-	mark.eng  {
-		background: none;
-		color: inherit;
-		font-family: "sofia-pro";
-		font-weight: 400;
-	}
+em  {
+	background: none;
+	color: inherit;
+	font-family: "sofia-pro";
+	font-weight: 400;
+}
 
 ul, li {
 	font-size: 2em;
-	line-height: 170%;
+	line-height: 1.7;
 	list-style: none;
 }
 
@@ -146,7 +145,7 @@ strong, b {
 	font-weight: 700;
 }
 
-em, i {
+i {
 	font-style: italic;
 }
 
@@ -185,13 +184,6 @@ h2 {
 		font-weight: 600;
 	}
 
-h3 {
-	font-family: "sofia-pro";
-	font-size: 2.1em;
-	font-weight: 600;
-	letter-spacing: 0.07em;
-}
-
 /* Subheading */
 h4 {
 	font-size: 2.5em;
@@ -209,7 +201,7 @@ img {
 
 
 /* --------------------------------------------------
- 02: Common Styles
+ 03: Common Styles
  -------------------------------------------------- */
 
 /* Colours
@@ -225,11 +217,11 @@ Grad. Purple: #381c3e*/
 
 /* Backgrounds
 -------------------------------------------------- */
-.whiteBG {
+.white_bg {
 	background-color: #fff;
 }
 
-.pinkGrad {
+.pink_grad {
 	background: #f32d83;
 	background: -webkit-linear-gradient(left top, #ed738a, #f32d83); 
 	background: -o-linear-gradient(bottom right, #ed738a, #f32d83); 
@@ -237,7 +229,7 @@ Grad. Purple: #381c3e*/
 	background: linear-gradient(to bottom right, #ed738a, #f32d83);
 }
 
-.purpleGrad {
+.purple_grad {
 	background: #503157;
 	background: -webkit-linear-gradient(left top, #381c3e, #503157); 
 	background: -o-linear-gradient(bottom right, #381c3e, #503157); 
@@ -245,15 +237,15 @@ Grad. Purple: #381c3e*/
 	background: linear-gradient(to bottom right, #381c3e, #503157);
 }
 
-.pinkGradPic {
+.pink_grad_pic {
 	background-image: url("../../images/Tools.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
-	z-index: -2;
+	z-index: 0;
 }
 
-	.pinkGradPic::after {
+	.pink_grad_pic::after {
 		background: #f32d83;
 		background: -webkit-linear-gradient(left top, #ed738a, #f32d83); 
 		background: -o-linear-gradient(bottom right, #ed738a, #f32d83); 
@@ -270,16 +262,15 @@ Grad. Purple: #381c3e*/
 	}
 
 
-.purpleGradPic {
+.purple_grad_pic {
 	background-image: url("../../images/Tools.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
-	z-index: -2;
-	border: 0;
+	z-index: 0;
 }
 
-	.purpleGradPic::after {
+	.purple_grad_pic::after {
 		background: #503157;
 		background: -webkit-linear-gradient(left top, #381c3e, #503157); 
 		background: -o-linear-gradient(bottom right, #381c3e, #503157); 
@@ -345,19 +336,19 @@ Grad. Purple: #381c3e*/
 
 
 /* --------------------------------------------------
- 02: Wrapper Style
+ 04: Wrapper Style
  -------------------------------------------------- */
 
 .wrapper {
 	box-sizing: content-box;
 	overflow: hidden;
-	padding: 125px 10px;
+	padding: 125px 12px;
 	position: relative;
 }
 
 	@media screen and (max-width: 768px) {
 		.wrapper {
-			padding: 50px 10px;
+			padding: 50px 12px;
 		}
 	}
 
@@ -384,8 +375,8 @@ Grad. Purple: #381c3e*/
 	padding: 0 25px;
 }
 
-	.block_inner > *:nth-child(n){
-		margin-bottom: 50px;
+	.block_inner > *:not(.title_block):nth-child(n){
+		margin-bottom: 40px;
 	}
 
 	.block_inner > *:last-child{
@@ -398,15 +389,15 @@ Grad. Purple: #381c3e*/
 	padding: 35px 0 60px;
 }
 
-	.block_inner > *:nth-child(n){
-		/*margin-bottom: 4rem;*/
+	.block_inner > *:not(.title_block):nth-child(n){
+		margin-bottom: 30px;
 	}
 
 }
 
 
 /* --------------------------------------------------
- 02: Content Style
+ 06: Content Style
  -------------------------------------------------- */
 
 /* Squiggly Line
@@ -416,27 +407,36 @@ Grad. Purple: #381c3e*/
 }
 
 
+/* Borders
+-------------------------------------------------- */
+@media screen and (max-width: 768px) {
+	* {
+		border-width: 2px !important;
+	}
+}
+
+
 /* Book Button
 -------------------------------------------------- */
 .book_button {
 	background: #fff;
 	border: 3px solid #f32d83;
     border-radius: 100px;
-    cursor: pointer;
+    cursor: pointer !important;
     display: block;
     float: bottom; 
-    margin-top: 20px;
     padding: 15px 10px;
     text-align: center;
     vertical-align: bottom;
     width: 100%;
+    z-index: 1000;
 }
+
 	.-facilitator .book_button {
 		background-color: #f32d83;
 	}
 
 	.book_button p {
-		font-size: 1.3em;
 		font-weight: 500;
 		line-height: 1.4;
 	}
@@ -444,12 +444,11 @@ Grad. Purple: #381c3e*/
 @media screen and (max-width: 768px){
 
 	.book_button {
-		margin-top: 15px;
 		padding: 10px;
 	}
 
 		.book_button p {
-			font-size: 1.1em;
+			font-size: 1.3em;
 		}
 }
 
@@ -461,42 +460,48 @@ Grad. Purple: #381c3e*/
 	width: 100%;
 }
 
-	.detail-list_block.white > * {
+	.detail-list_block.no_border > * {
+		border: none !important;
+	}
+
+	.detail-list_block.white_border > * {
 		border-color: #fff;
 	}
 
-	.detail-list_block.pink > * {
+	.detail-list_block.pink_border > * {
 		border-color: #f32d83;
 	}
 
-	.detail-list_item {
-		border: 3px solid;
-		box-sizing: border-box;
-		padding: 20px;
-		text-align: center;
+.detail-list_item {
+	border: 3px solid;
+	box-sizing: border-box;
+	padding: 20px;
+	text-align: center;
+	width: 100%;
+}
+
+	.detail-list_item:nth-child(2) {
+		margin: 0 20px;
+	}
+
+.detail-list_image {
+	margin-bottom: 20px;
+	width: auto;
+}
+
+	.detail-list_image img {
 		width: 100%;
 	}
 
-		.detail-list_item:nth-child(2) {
-			margin: 0 20px;
-		}
+.detail-list_text {
+	font-size: 1.6em;
+}
 
-			.detail-list_image {
-				margin-bottom: 20px;
-				width: auto;
-			}
-
-				.detail-list_image img {
-					width: 100%;
-				}
-
-			.detail-list_subtitle, .detail-list_text {
-				font-size: 1.7em;
-			}
-
-			.detail-list_subtitle {
-				font-weight: 700;
-			}
+.detail-list_subtitle {
+	/*font-size: 2.5em;*/
+	font-weight: 700;
+	margin-bottom: 10px;
+}
 
 
 @media screen and (max-width: 768px) {
@@ -517,14 +522,14 @@ Grad. Purple: #381c3e*/
 				max-width: 30rem;
 			}
 
-			.detail-list_subtitle, .detail-list_text {
+		/*	.detail-list_subtitle, .detail-list_text {
 				max-width: 30rem;
-			}
+			}*/
 
-			.detail-list_subtitle {
+		/*	.detail-list_subtitle {
 				margin-left: auto;
 				margin-right: auto;
-			}
+			}*/
 			
 			.detail-list_text {
 				margin: 0 auto !important;
@@ -533,11 +538,11 @@ Grad. Purple: #381c3e*/
 
 
 /* --------------------------------------------------
- 05: Section Title Style
+ 07: Section Title Style
 -------------------------------------------------- */
 
 .title_block {
-	margin-bottom: 60px;
+	margin-bottom: 50px;
 }
 	
 	.title_block h1{
@@ -552,7 +557,7 @@ Grad. Purple: #381c3e*/
 		background-color: #503157;
 		content: "";
 		display: block;
-		height: 3px;
+		height: 3.5px;
 		opacity: 0.5;
 		width: 50px;	
 	}
@@ -582,11 +587,15 @@ Grad. Purple: #381c3e*/
 		margin-bottom: 20px;
 	}
 
+	.title_block:after {
+		height: 2.5px;
+	}
+
 }
 
 
 /* --------------------------------------------------
- 05: Banner Style
+ 08: Banner Style
 -------------------------------------------------- */
 
 #banner {
@@ -603,7 +612,7 @@ Grad. Purple: #381c3e*/
 	-webkit-justify-content: center;
 	-ms-justify-content: center;
 	justify-content: center;
-	height: 100vh;
+	height: 95vh;
 	overflow: hidden;
 	position: relative;
 	text-align: center;
@@ -611,17 +620,18 @@ Grad. Purple: #381c3e*/
 
 .main_title_inner {
 	/*background-color: lightgrey;*/
-	max-width: 800px;
-	margin: 0 auto;
-	padding: 0 15px;
+	max-width: 830px;
+	margin: 0 auto 20px auto;
+	padding: 0 37px;
+	z-index: 1000;
 }
 
 	.main_title_inner *:first-child{
-		margin-bottom: 50px;
+		margin-bottom: 60px;
 	}
 
 	.main_title_inner h2{
-		font-size: 2.75em;
+		font-size: 2.6em;
 	}
 
 	.main_title_inner .logo {
@@ -663,6 +673,14 @@ Grad. Purple: #381c3e*/
 	width: 100%;
 }
 
+	.scroll h2 {
+		font-family: "sofia-pro";
+		font-size: 2.2em;
+		font-weight: 600;
+		letter-spacing: 0.07em;
+		margin-bottom: 15px;
+	}
+
 	.scroll:after {
 		background-image: url("../../images/pinkArrow.png");
 		background-position: center;
@@ -671,16 +689,45 @@ Grad. Purple: #381c3e*/
 		content: '';
 		display: block;
 		height: 40px;
-		margin: 25px auto 0;
+		margin: 0 auto;
 		width: 100%;
 	}
 
 	
 @media screen and (max-width: 768px) {
 
-	.main_title_inner .logo {
-		width: 200px;
+	#banner {
+		height: 88vh;
 	}
+
+	.main_title_inner {
+		margin: 0 auto 15px auto;
+	}
+
+		.main_title_inner *:first-child{
+			margin-bottom: 40px;
+		}
+
+		.main_title_inner h2{
+			font-size: 1.9em;
+		}
+
+		.main_title_inner .logo {
+			width: 160px;
+		}
+
+	.scroll {			
+		bottom: 20px;
+	}
+		
+		.scroll h2 {
+			font-size: 2em;
+			margin-bottom: 7px;
+		}
+
+		.scroll:after {
+			height: 30px;
+		}
 
 }
 
@@ -702,7 +749,7 @@ Grad. Purple: #381c3e*/
 
 
 /* --------------------------------------------------
- 05: About Style
+ 09: About Style
 -------------------------------------------------- */
 
 .profile_inner {
@@ -711,68 +758,68 @@ Grad. Purple: #381c3e*/
 }
 
 	.profile_inner:first-child{
-		margin-bottom: 80px;
+		margin-bottom: 40px;
 	}	
 
-	.profile_pic {
-		line-height: 0;
-		width: 52%;
+.profile_pic {
+	line-height: 0;
+	width: 52%;
+}
+
+	.profile_pic img {
+		width: 100%;
 	}
 
-		.profile_pic img {
-			width: 100%;
-		}
+.profile_text {
+	box-sizing: border-box;
+	border: 3px solid #f32d83;
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	right: 0;
+	top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+	width: 52%;
+}
 
-	.profile_text {
-		box-sizing: border-box;
-		border: 3px solid #f32d83;
-		display: flex;
-		justify-content: center;
-		position: absolute;
-		right: 0;
-		top: 50%;
-	    -webkit-transform: translateY(-50%);
-	    transform: translateY(-50%);
-		width: 52%;
+	.profile_text_inner {
+		width: 320px;
+		padding: 30px 20px 30px 40px;
 	}
-
-		.profile_text_inner {
-			width: 310px;
-			padding: 30px 20px 30px 40px;
+	
+		.profile_name {
+			font-size: 1.8rem;
+			font-weight: 700;
+			margin: 0;
 		}
-		
-			.profile_name {
-				font-size: 1.8rem;
-				font-weight: 700;
-				margin: 0;
+
+			.profile_name mark.eng {
+				font-weight: 600;
 			}
 
-				.profile_name mark.eng {
-					font-weight: 600;
-				}
-
-			.profile_desc, .profile_desc * {
-				font-size: 1.3rem;
-			}
-
-
-	.profile_inner:nth-child(2n) .profile_pic{
-		margin: 0 0 0 auto;
-	}
-
-	.profile_inner:nth-child(2n) .profile_text{
-		left: 0;
-	}
-		
-		.profile_inner:nth-child(2n) .profile_text_inner{
-			padding: 30px 40px 30px 20px ;
+		.profile_desc, .profile_desc * {
+			font-size: 1.3rem;
 		}
-		
+
+
+.profile_inner:nth-child(2n) .profile_pic{
+	margin: 0 0 0 auto;
+}
+
+.profile_inner:nth-child(2n) .profile_text{
+	left: 0;
+}
+	
+.profile_inner:nth-child(2n) .profile_text_inner{
+	padding: 30px 40px 30px 20px ;
+}
+	
 
 @media only screen and (max-width: 768px){
 	
 	.profile_inner:first-child{
-		margin-bottom: 40px;
+		margin-bottom: 30px;
 	}	
 
 		.profile_pic {
@@ -795,7 +842,7 @@ Grad. Purple: #381c3e*/
 
 
 /* --------------------------------------------------
- 05: Course Style
+ 10: Course Style
 -------------------------------------------------- */
 
 .course_container {
@@ -808,6 +855,7 @@ Grad. Purple: #381c3e*/
 
 		.course_desc {
 			border: 3px solid #f32d83;
+			margin-bottom: 20px;
 			padding: 30px;
 		}
 
@@ -835,11 +883,12 @@ Grad. Purple: #381c3e*/
 	}
 
 		.course_desc {
+			margin-bottom: 15px;
 			padding: 20px;
 		}
 
 		.course_item:first-child {
-			margin-bottom: 40px;
+			margin-bottom: 30px;
 		}
 
 		.course_headline {
@@ -849,13 +898,22 @@ Grad. Purple: #381c3e*/
 
 
 /* --------------------------------------------------
- 05: Pricing Style
+ 11: Pricing Style
 -------------------------------------------------- */
+
+.price {
+	margin-bottom: 0 !important;
+}
 
 .price_container {
 	display: -webkit-flex;
 	display: flex;
 }
+
+	.price_container * {
+		z-index: 1000;
+	}
+	
 	
 	.price_container.headings {
 		margin-bottom: 30px;
@@ -912,40 +970,41 @@ Grad. Purple: #381c3e*/
 		font-weight: 500;
 	}
 	
-
-.price_list dt {
-	box-sizing: border-box;
-	-webkit-flex-direction: column;
-    flex-direction: column;
-    display: -webkit-flex;
-    display: flex;
-    float: left;
-    font-size: 1.8em;
-    height: 65px;
-    -webkit-justify-content: center;
-    justify-content: center;
-    line-height: 1.4;
-    padding: 0 10px; 
-    width: 100%;
+.price_list {
+	margin-bottom: 30px;
 }
 
-.price_list dd {
-	-webkit-align-items: center;
-    align-items: center;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    display: -webkit-flex;
-    display: flex;
-    height: 65px;
-    -webkit-justify-content: center;
-    justify-content: center;
-    text-align: center;
-}
-
-	.price_list dt:nth-of-type(odd),
-	.price_list dd:nth-of-type(odd) {
-		background-color: #ffebf3;
+	.price_list dt {
+		box-sizing: border-box;
+		-webkit-flex-direction: column;
+	    flex-direction: column;
+	    display: -webkit-flex;
+	    display: flex;
+	    float: left;
+	    height: 65px;
+	    -webkit-justify-content: center;
+	    justify-content: center;
+	    padding: 0 20px; 
+	    width: 100%;
 	}
+
+	.price_list dd {
+		-webkit-align-items: center;
+	    align-items: center;
+	    -webkit-flex-direction: column;
+	    flex-direction: column;
+	    display: -webkit-flex;
+	    display: flex;
+	    height: 65px;
+	    -webkit-justify-content: center;
+	    justify-content: center;
+	    text-align: center;
+	}
+
+		.price_list dt:nth-of-type(odd),
+		.price_list dd:nth-of-type(odd) {
+			background-color: #ffebf3;
+		}
 
 
 .price_check {
@@ -989,6 +1048,10 @@ Grad. Purple: #381c3e*/
 
 @media screen and (max-width: 768px){
 
+	.price {
+		margin-bottom: 30px !important;
+	}
+
 	.price_type_container > *:first-child {
 		margin: 0 0 0 5px;
 	}
@@ -1001,14 +1064,22 @@ Grad. Purple: #381c3e*/
 		flex: 0 0 150px;
 	}
 
-	.price_list dt {
-		font-size: 1.4em;
-		height: 60px;
+	.price_list {
+		margin-bottom: 15px;
 	}
 
-	.price_list dd {
-	    height: 60px;
-	}
+		.price_list dt {
+			height: 60px;
+			padding: 0 15px;
+		}
+
+			.price_list dt p {
+				font-size: 1.4em;
+			}
+
+		.price_list dd {
+		    height: 60px;
+		}
 
 	.price_headline {
 		padding: 10px 5px;
@@ -1048,7 +1119,7 @@ Grad. Purple: #381c3e*/
 
 
 /* --------------------------------------------------
- 05: FAQ
+ 12: FAQ
 -------------------------------------------------- */
 
 .qa_inner {
@@ -1089,7 +1160,7 @@ Grad. Purple: #381c3e*/
 
 
 /* --------------------------------------------------
- 05: Footer
+ 13: Footer
 -------------------------------------------------- */
 
 #footer {
@@ -1170,7 +1241,7 @@ Grad. Purple: #381c3e*/
 
 
 /* --------------------------------------------------
- 05: Landing
+ 14: Landing
 -------------------------------------------------- */
 
 	body.landing #page-wrapper {
