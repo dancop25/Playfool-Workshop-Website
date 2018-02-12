@@ -28,12 +28,12 @@ $(document).ready(function() {
 
     // Changing Height of Workshop Box
 	function changeWorkshopHeight() {
-		if ($window.width() >= 768) {
-			var facilitator_height = $course_desc_facilitator.css('height');
-		    $course_desc_workshop.css('height', facilitator_height);
-		} else {
-			$course_desc_workshop.css('height', 'auto');
-		}
+		// if ($window.width() >= 768) {
+		// 	var facilitator_height = $course_desc_facilitator.css('height');
+		//     $course_desc_workshop.css('height', facilitator_height);
+		// } else {
+		// 	$course_desc_workshop.css('height', 'auto');
+		// }
 	}
 
 	// Squiggly Line
