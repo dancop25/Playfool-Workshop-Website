@@ -12,8 +12,9 @@ $(document).ready(function() {
 	var $window = $(window),
 	$block = $(".block"),
     $block_inner = $(".block_inner"),
-    $course_desc_workshop = $(".-workshop > .course_desc"),
-    $course_desc_facilitator = $(".-facilitator > .course_desc"),
+    $banner = $("#banner"),
+    $bg_vid = $("#bg_vid"),
+    $mobile_bg = $("#mobile_bg"),
 	lineWidth,
 	frequency,
 	amplitude,
@@ -26,15 +27,21 @@ $(document).ready(function() {
 // Functions
 // ------------------------------------
 
-    // Changing Height of Workshop Box
-	function changeWorkshopHeight() {
-		// if ($window.width() >= 768) {
-		// 	var facilitator_height = $course_desc_facilitator.css('height');
-		//     $course_desc_workshop.css('height', facilitator_height);
-		// } else {
-		// 	$course_desc_workshop.css('height', 'auto');
-		// }
-	}
+	 // Adjust the view height property to current window size.
+	function changeSectionHeight() {
+		viewportHeight = $window.height();
+        $banner.css('height', viewportHeight*0.95);
+    };
+    
+
+    // Change bg for mobile.
+    function changeMobileBG() {
+    	if (isMobile == true) {
+    		$bg_vid.css('display', 'none');
+    		$mobile_bg.css('display', 'block');
+    	};
+    };
+
 
 	// Squiggly Line
 	CanvasRenderingContext2D.prototype.wavy = function(from, to, frequency, amplitude, step, negative) 
@@ -55,8 +62,8 @@ $(document).ready(function() {
 			cx = from.x + Math.cos(ang) * i + Math.cos(ang - Math.PI/2) * waveOffsetLength;
 			cy = from.y + Math.sin(ang) * i + Math.sin(ang - Math.PI/2) * waveOffsetLength;
 			i > 0 ? this.lineTo(cx, cy) : this.moveTo(cx, cy);
-		}
-	}
+		};
+	};
 
 	function drawSquigglyLine() {
 		$(".squiggly_line").each(function(i, data) {
@@ -96,13 +103,15 @@ $(document).ready(function() {
 // ------------------------------------
 
 	// Call Functions
+	changeSectionHeight();
+	changeMobileBG();
 	drawSquigglyLine();
-    changeWorkshopHeight();
 
 	// Reload Functions on Window Resize 
 	$window.resize(function () {
+		changeSectionHeight();
+		changeMobileBG();
         drawSquigglyLine();
-        changeWorkshopHeight();
     });
 
 
