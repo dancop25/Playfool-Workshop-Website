@@ -1020,26 +1020,13 @@ and (orientation: landscape) {
 	}
 
 	.course_headline {
-		margin-bottom: 20px;
+		margin-bottom: 12px;
 	}
 
 	.-workshop .course_img_container {
 		margin-bottom: 12px;
 	}
 
-/*	.course_img_container {
-	    margin-left:auto; 
-	    margin-right:auto;
-		max-width: 400px;
-	}
-
-	.course_img {
-		width: 100% !important;
-	}
-
-		.-workshop .course_img:first-child { 
-			margin-bottom: 10px;
-		}*/
 }
 
 
@@ -1350,14 +1337,13 @@ and (orientation: landscape) {
 }
 
 .Q, .A {
-	margin-right: 15px;
+	margin-right: 20px;
 	text-align: center;
-	width: 100px;
+	width: 55px;
 }
 
 	.Q::after, .A::after {
-		font-family: "sofia-pro";
-		font-size: 7rem;
+		font-size: 6rem;
 		font-weight: 700;
 		line-height: 0.57;
 		padding-bottom: 1.4px;
@@ -1382,6 +1368,8 @@ and (orientation: landscape) {
 		margin-bottom: 25px !important;
 	}
 
+	.Q::after, .A::after {font-size: 5rem;}
+	
 	.q_text {font-size: 1.4rem;}
 	.a_text {font-size: 1.2rem;}
 }
