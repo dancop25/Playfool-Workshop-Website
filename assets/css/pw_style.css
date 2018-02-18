@@ -400,7 +400,14 @@ Grad. Purple: #381c3e*/
 /* Squiggly Line
 -------------------------------------------------- */
 .squiggly_line {
-	opacity: 0.5;
+	opacity: 0.4;
+	height: 13.5px;
+}
+
+@media screen and (max-width: 768px) {
+	.squiggly_line {
+		height: 13.5px;
+	}
 }
 
 
