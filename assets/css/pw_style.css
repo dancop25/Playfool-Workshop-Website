@@ -16,6 +16,7 @@
  12: Profiles
  13: Footer Button
  14: Footer
+ 15: Landing
 ------------------------------
 ##################################################*/
 
@@ -401,13 +402,6 @@ Grad. Purple: #381c3e*/
 -------------------------------------------------- */
 .squiggly_line {
 	opacity: 0.4;
-	height: 13.5px;
-}
-
-@media screen and (max-width: 768px) {
-	.squiggly_line {
-		height: 13.5px;
-	}
 }
 
 
@@ -953,11 +947,11 @@ and (orientation: landscape) {
 	margin-bottom: 8px;
 }
 
-.about_profile_inner:nth-child(2n+1) .about_profile_pic{margin: 0 0 0 auto;}
+.about_profile_inner:nth-child(2n) .about_profile_pic{margin: 0 0 0 auto;}
 
-.about_profile_inner:nth-child(2n+1) .about_profile_text{left: 0;}
+.about_profile_inner:nth-child(2n) .about_profile_text{left: 0;}
 	
-.about_profile_inner:nth-child(2n+1) .about_profile_text_inner{padding: 30px 40px 30px 20px ;}
+.about_profile_inner:nth-child(2n) .about_profile_text_inner{padding: 30px 40px 30px 20px ;}
 	
 
 @media only screen and (max-width: 768px){
@@ -1324,7 +1318,7 @@ and (orientation: landscape) {
 
 
 /* --------------------------------------------------
- 10: FAQ
+ 11: FAQ
 -------------------------------------------------- */
 
 .qa_inner {
@@ -1383,7 +1377,7 @@ and (orientation: landscape) {
 
 
 /* --------------------------------------------------
- 11: Profiles
+ 12: Profiles
 -------------------------------------------------- */
 
 .profile_heading_container {
@@ -1452,7 +1446,7 @@ and (orientation: landscape) {
 
 
 /* --------------------------------------------------
- 12: Footer Button
+ 13: Footer Button
 -------------------------------------------------- */
 
 #footer_button.wrapper {
@@ -1493,7 +1487,7 @@ and (orientation: landscape) {
 
 
 /* --------------------------------------------------
- 13: Footer
+ 14: Footer
 -------------------------------------------------- */
 
 #footer {
@@ -1582,4 +1576,14 @@ and (orientation: landscape) {
 		height: 30px;
 	}
 }
+
+
+/* --------------------------------------------------
+ 15: Landing
+-------------------------------------------------- */
+
+	body.landing #page-wrapper {
+		padding-top: 0;
+		z-index: 0;
+	}
 
