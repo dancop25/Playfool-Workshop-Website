@@ -78,7 +78,7 @@ $(document).ready(function() {
 
 			if ($window.width() <= 768) { 
 				var sp_ratio = 1.4; 
-				lineWidth = 2.5; 
+				lineWidth = 2; 
 				amplitude = amplitude / sp_ratio;
 				frequency = frequency * sp_ratio;
 			} 
