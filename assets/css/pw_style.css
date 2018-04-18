@@ -1100,15 +1100,14 @@ and (orientation: landscape) {
 
 .price_deal {
 	border: 3px solid #f32d83;
-	padding: 70px 50px;
+	padding: 70px 60px;
 	position: relative;
 }
 
 .price_deal_container {
 	position: relative;
-	height: 150px;
 	margin: 0 auto;
-	max-width: 657px;
+	max-width: 620px;
 }
 
 /* Original Price
@@ -1136,6 +1135,7 @@ and (orientation: landscape) {
 
 .original_price strong, .new_price strong {
 	font-size: 0.7em;
+	line-height: 1.2;
 }
 
 .new_price em, .original_price em {
@@ -1148,15 +1148,17 @@ and (orientation: landscape) {
 /* New Price
 -------------------------------------------------- */
 .new_price_container {
-	bottom: 0;
     display: table;
-	position: absolute;
-    right: 0;
+    margin-bottom: 15px;
+	position: relative;
+	width: 100%;
 }
 
 .new_price_inner {
 	display: table-cell;
-	vertical-align: bottom;
+	position: relative;
+	vertical-align: top;
+	width: 100%;
 }
 
 .new_price {
@@ -1179,8 +1181,10 @@ and (orientation: landscape) {
     height: 150px;
     -webkit-justify-content: center;
     justify-content: center;
-    margin-left: -10px;
+    margin-left: 0px;
 	width: 150px;
+	position: relative;
+	/*top: 20px;*/
 }
 
 	.price_bubble p {
@@ -1189,6 +1193,10 @@ and (orientation: landscape) {
 		font-weight: 400;
 		letter-spacing: 0.1em;
 	}
+
+.price_detail {
+	line-height: 1.6;
+}
 
 @media screen and (max-width: 768px){
 
@@ -1220,11 +1228,8 @@ and (orientation: landscape) {
 	}
 
 		.date_text .date {
-			bottom: 2px;
-			font-size: 2.2rem;
-			font-weight: 700;
-			line-height: 1.2;
-			position: relative;
+			font-size: 1.8rem;
+			line-height: 1.5;
 		}
 
 			.date_text .date br {
@@ -1281,6 +1286,7 @@ and (orientation: landscape) {
 	-------------------------------------------------- */
 	.new_price_container {
 	    display: block;
+	    margin-bottom: 15px;
 		position: relative;
 	}
 
@@ -1326,16 +1332,16 @@ and (orientation: landscape) {
 	align-items: center;
 	display: -webkit-flex;
 	display: flex;
-	height: 50px;
+	height: auto;
 }
 	
 	.qa_inner:first-child {
 		margin-bottom: 40px;
 	}
 
-.question_answer:nth-child(6) {
-	margin-bottom: 55px !important;
-}
+	.qa_inner.bullet_points {
+		height: auto;
+	}
 
 .Q, .A {
 	margin-right: 20px;
@@ -1364,10 +1370,6 @@ and (orientation: landscape) {
 @media screen and (max-width: 768px){
 	.qa_inner {height: auto;}
 		.qa_inner:first-child {margin-bottom: 20px;}
-
-	.question_answer:nth-child(6) {
-		margin-bottom: 25px !important;
-	}
 
 	.Q::after, .A::after {font-size: 5rem;}
 	
