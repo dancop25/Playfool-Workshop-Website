@@ -1133,12 +1133,13 @@ and (orientation: landscape) {
 		padding-left: 0.2em;
 	}
 
-.original_price strong, .new_price strong {
-	font-size: 0.7em;
+.original_price strong {
+	font-size: 3rem;
 	line-height: 1.2;
+	font-style: italic;
 }
 
-.new_price em, .original_price em {
+.original_price em {
 	font-style: italic;
 	margin-right: 0.09em;
 	position: relative;
@@ -1147,6 +1148,7 @@ and (orientation: landscape) {
 
 /* New Price
 -------------------------------------------------- */
+
 .new_price_container {
     display: table;
     margin-bottom: 15px;
@@ -1161,11 +1163,43 @@ and (orientation: landscape) {
 	width: 100%;
 }
 
-.new_price {
-	font-size: 6.7rem;
+.new_price_heading {
+	font-size: 4.2rem;
 }
 
-	.new_price span {
+.new_prices {
+	position: relative;
+	vertical-align: top;
+	width: 100%;
+}
+
+.new_price {
+	margin-top: 3.25rem;
+	padding-left: 2rem;
+}
+
+.new_price_subheading {
+	font-size: 3.5rem;
+	font-style: italic;
+	margin-bottom: 0.2rem;
+}
+
+.new_price_amount {
+	font-size: 5.8rem;
+}
+
+	.new_price_amount strong {
+		font-size: 0.7em;
+		line-height: 1rem;
+	}
+
+	.new_price_amount em {
+		font-style: italic;
+		margin-right: 0.09em;
+		position: relative;
+	}
+
+	.new_price_amount span {
 		font-weight: 400;
 		font-size: 2.2rem;
 		padding-left: 0.2em;
@@ -1174,28 +1208,33 @@ and (orientation: landscape) {
 .price_bubble {
 	background-color: #f32d83;
 	border-radius: 1000px;
-	-webkit-flex-direction: column;
-	flex-direction: column;
     display: -webkit-flex;
     display: flex;
-    height: 150px;
+    -webkit-flex-direction: column;
+	flex-direction: column;
+    height: 180px;
     -webkit-justify-content: center;
     justify-content: center;
-    margin-left: 0px;
-	width: 150px;
-	position: relative;
-	/*top: 20px;*/
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 180px;
 }
 
 	.price_bubble p {
 		text-align: center;
-		font-size: 1.8rem;
-		font-weight: 400;
+		font-size: 2.6rem;
+		font-weight: 600;
 		letter-spacing: 0.1em;
 	}
 
+		.price_bubble mark {
+			letter-spacing: -0.2em;
+		}
+
 .price_detail {
-	line-height: 1.6;
+	margin-top: 3.25rem;
 }
 
 @media screen and (max-width: 768px){
@@ -1296,29 +1335,57 @@ and (orientation: landscape) {
 		vertical-align: bottom;
 	}
 
-	.new_price {
-		font-size: 3.5rem;
+	.new_price_heading {
+		font-size: 2.45rem;
 	}
 
-		.new_price em {
+	.new_prices {
+		position: relative;
+		vertical-align: top;
+		width: 100%;
+	}
+
+	.new_price {
+		margin-top: 2.5rem;
+		padding-left: 0rem;
+	}
+
+	.new_price_subheading {
+		font-size: 2.2rem;
+		margin-bottom: 0.2rem;
+	}
+
+	.new_price_amount {
+		font-size: 3rem;
+	}
+
+		.new_price_amount em {
 			font-style: italic;
 			font-weight: 700;
 			margin-right: 4px;
 		}
 
-		.new_price span {
+		.new_price_amount span {
 			font-size: 1.6rem;
 		}
 
 	.price_bubble {
-	    height: 120px;
+	    height: 130px;
 	    margin: 0 auto;
-		width: 120px;
+	    margin-top: 2.5rem;
+		position: static;
+		width: 130px;
+		top: 0;
+		transform: translateY(0);
 	}
 
 		.price_bubble p {
-			font-size: 1.4rem;
+			font-size: 1.9rem;
 		}
+
+	.price_detail {
+		margin-top: 2.5rem;
+	}
 
 }
 
