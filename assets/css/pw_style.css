@@ -1180,7 +1180,6 @@ and (orientation: landscape) {
 
 .new_price_subheading {
 	font-size: 3.5rem;
-	font-style: italic;
 	margin-bottom: 0.2rem;
 }
 
@@ -1218,6 +1217,7 @@ and (orientation: landscape) {
 	position: absolute;
 	right: 0;
 	top: 50%;
+	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 	width: 180px;
 }
@@ -1376,6 +1376,7 @@ and (orientation: landscape) {
 		position: static;
 		width: 130px;
 		top: 0;
+		-webkit-transform: translateY(0);
 		transform: translateY(0);
 	}
 
