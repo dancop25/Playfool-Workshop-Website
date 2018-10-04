@@ -35,12 +35,12 @@ $(document).ready(function() {
     
 
     // Change bg for mobile.
-    function changeMobileBG() {
-    	if (isMobile == true) {
-    		$bg_vid.css('display', 'none');
-    		$mobile_bg.css('display', 'block');
-    	};
-    };
+    // function changeMobileBG() {
+    // 	if (isMobile == true) {
+    // 		$bg_vid.css('display', 'none');
+    // 		$mobile_bg.css('display', 'block');
+    // 	};
+    // };
 
 
 	// Squiggly Line
@@ -70,20 +70,19 @@ $(document).ready(function() {
 			
 			lineWidth = 3.5; 
 			amplitude = 4.5;
-
 			$(this).css('width', $block_inner.width());
-			$(this).css('height', squiggleHeight);
-			// frequency = $(this).width() * (1/26);
 			frequency = $(this).width() * (1/22);
 
-			if ($window.width() <= 768) { 
-				var sp_ratio = 1.4; 
-				lineWidth = 2; 
-				amplitude = amplitude / sp_ratio;
-				frequency = frequency * sp_ratio;
+			if (isMobile) { 
+				var mobileRatio = 1.4; 
+				lineWidth = lineWidth/ mobileRatio; 
+				amplitude = amplitude / mobileRatio;
+				frequency = frequency * mobileRatio;
 			} 
 
 			squiggleHeight = (amplitude * 2) + lineWidth + 1;
+
+			$(this).css('height', squiggleHeight);
 
 			var ctx = $(this)[0].getContext('2d');
 		    ctx.canvas.width  = $(this).width()*2;
@@ -104,13 +103,13 @@ $(document).ready(function() {
 
 	// Call Functions
 	changeSectionHeight();
-	changeMobileBG();
+	// changeMobileBG();
 	drawSquigglyLine();
 
 	// Reload Functions on Window Resize 
 	$window.resize(function () {
 		changeSectionHeight();
-		changeMobileBG();
+		// changeMobileBG();
         drawSquigglyLine();
     });
 

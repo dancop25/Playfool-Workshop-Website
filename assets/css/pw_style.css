@@ -74,7 +74,7 @@ body {
 	-webkit-text-size-adjust: 100%;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 812px) {
 	body {
 		font-size: 1.4rem;
 	}
@@ -107,7 +107,7 @@ p {
 	.pL *, .pL p, .pL {font-size: 1.8rem;}
 	.pXL *, .pXL p, .pXL {font-size: 2.0rem;}
 
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 812px) {
 
 		p {font-size: 1.2rem;}
 
@@ -126,7 +126,7 @@ ul, li {
 }
 
 a {
-	border-bottom: solid 2px;
+	border-bottom: solid 3px;
 	color: inherit;
 	font-weight: 600;
 	text-decoration: none;
@@ -140,16 +140,17 @@ a {
 		border-bottom-color: transparent;
 	}
 
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 812px) {
 
 		a {
 			border-bottom: solid 2px;
-			padding-bottom: 0;
 		}
+
 	}
 
 strong, b {font-weight: 700;}
 i {font-style: italic;}
+.center { text-align: center; }
 
 mark {
 	background: none;
@@ -163,12 +164,13 @@ br {
 
 /* Headings
 -------------------------------------------------- */
+
 h1 a, h2 a, h3 a {
 	color: inherit;
 	text-decoration: none;
 }
 
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 812px) {
 		h2 br { display: none; }
 	}
 
@@ -191,7 +193,7 @@ h3 {
 	h3.lhS {line-height: 1.4;}
 	h3.lhM {line-height: 1.7;}
 
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 812px) {
 		h3 {font-size: 2.4rem;}
 
 		.h3XXXS h3, .h3XXXS {font-size: 1.6rem;}
@@ -201,6 +203,21 @@ h3 {
 		.h3M h3, .h3M {font-size: 2.0rem;}
 		.h3L h3, .h3L {font-size: 2.6rem;}
 		.h3LL h3, .h3XL {font-size: 2.8rem;}
+	}
+
+h4 {
+	font-size: 4rem;
+	font-weight: 700;
+	line-height: 1.4;
+	margin: 0;
+	text-align: center;
+}
+
+	@media screen and (max-width: 812px) {
+		h4 {
+			font-size: 2.4rem;
+		}
+
 	}
 
 
@@ -261,7 +278,7 @@ Grad. Purple: #381c3e*/
 }
 
 .pink_grad_pic {
-	background-image: url("../../images/background_img_01.jpg");
+	background-image: url("../../images/background_img_02.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
@@ -285,7 +302,7 @@ Grad. Purple: #381c3e*/
 	}
 
 .purple_grad_pic {
-	background-image: url("../../images/background_img_01.jpg");
+	background-image: url("../../images/background_img_02.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
@@ -324,13 +341,13 @@ Grad. Purple: #381c3e*/
 /* Display
 -------------------------------------------------- */
 .display-pc {}
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 812px) {
 	.display-pc {
 		display: none !important;
 	}
 }
 .display-sp { display: none;}
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 812px) {
 	.display-sp {
 		display: block !important;
 	}
@@ -348,11 +365,16 @@ Grad. Purple: #381c3e*/
 	position: relative;
 }
 
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 812px) {
 		.wrapper {
 			padding: 40px 12px;
 		}
 	}
+
+/* Remove 1px gap between sections */
+#about, #target, #uniqueness, #special_gift, #pricing, #FAQ {
+	margin-top: -1px;
+}
 
 
 /* --------------------------------------------------
@@ -381,7 +403,7 @@ Grad. Purple: #381c3e*/
 		margin-bottom: 40px;
 	}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 812px) {
 
 .block {
 	padding: 35px 0 45px;
@@ -404,6 +426,16 @@ Grad. Purple: #381c3e*/
 	opacity: 0.4;
 }
 
+#pricing .squiggly_line {
+	margin: 20px 0 50px 0 !important;
+}
+
+	@media screen and (max-width: 812px) {
+		#pricing .squiggly_line {
+			margin: 10px 0 28px 0 !important;
+		}
+	}
+
 
 /* Borders
 -------------------------------------------------- */
@@ -413,7 +445,7 @@ Grad. Purple: #381c3e*/
 .pink_border > * {border: 3px solid #f32d83;}
 .no_border > * { border: none !important; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 812px) {
 	* {
 		border-width: 2px !important;
 	}
@@ -449,7 +481,9 @@ Grad. Purple: #381c3e*/
 		line-height: 1.4;
 	}
 
-	.book_button br {display: none;}
+	.book_button br {
+		display: none;
+	}
 
 	.book_button:hover {
 		opacity: 0.7;
@@ -474,17 +508,19 @@ Grad. Purple: #381c3e*/
 	}
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 812px){
 
 	.book_button {
-		padding: 10px;
+		padding: 15px 25px;
 	}
 
 		.book_button p {
-			font-size: 1.3em;
+			font-size: 1.4em;
 		}
 
-		.book_button br {display: block;}
+		.book_button br {
+			display: block;
+		}
 
 		.book_button:after {
 			font-size: 0.7rem;
@@ -523,7 +559,7 @@ Grad. Purple: #381c3e*/
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 812px) {
 	.detail_column_block {
 		display: block;
 	}
@@ -599,7 +635,7 @@ Grad. Purple: #381c3e*/
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 812px) {
 
 	.detail_row_item {
 		display: block;
@@ -678,7 +714,7 @@ Grad. Purple: #381c3e*/
 		background-color: #503157;
 		content: "";
 		display: block;
-		height: 3.5px;
+		height: 3x;
 		opacity: 0.4;
 		width: 50px;	
 	}
@@ -687,7 +723,7 @@ Grad. Purple: #381c3e*/
 			background-color: #fff;
 		}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 812px) {
 
 	.title_block {
 		margin-bottom: 30px;
@@ -754,14 +790,25 @@ Grad. Purple: #381c3e*/
 		opacity: 1;
 		outline: 1px solid transparent;
 		position: relative;
-		width: 250px;
+		width: 280px;
 		z-index: 1;
+	}
+
+.gmark {
+	left: 0;
+	padding: 40px;
+	position: absolute;
+	top: 0;
+}
+
+	.gmark img {
+		width: 240px;
 	}
 
 .scroll {
 	-webkit-animation: fadeIn 1s ease-in-out 2s forwards, slideIn 1s ease-in-out 2s forwards;
 	animation: fadeIn 1s ease-in-out 2s forwards, slideIn 1s ease-in-out 2s forwards;			
-	bottom: 3.9em;
+	bottom: 40px;
 	font-size: 1rem;
 	height: auto;
 	margin: 0 auto;
@@ -790,7 +837,7 @@ Grad. Purple: #381c3e*/
 	}
 
 	
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 812px) {
 
 	#banner {
 		height: 90vh;
@@ -814,10 +861,20 @@ Grad. Purple: #381c3e*/
 			}
 
 		.main_title_inner .logo {
-			width: 140px;
+			width: 160px;
+		}
+
+	.gmark {
+		padding: 20px;
+		right: 0;
+	}
+
+		.gmark img {
+			width: 150px;
 		}
 
 	.scroll {
+		bottom: 30px;
 		font-size: 0.8rem;			
 	}
 		
@@ -830,7 +887,7 @@ Grad. Purple: #381c3e*/
 		}
 }
 
-@media screen and (max-width: 768px) 
+@media screen and (max-width: 812px) 
 and (orientation: landscape) {
 
 	.main_title_inner {
@@ -848,6 +905,10 @@ and (orientation: landscape) {
 			.main_title_inner .h3L br {
 				display: block;
 			}
+
+	.gmark {
+		right: auto;
+	}
 }
 
 
@@ -953,9 +1014,9 @@ and (orientation: landscape) {
 .about_profile_inner:nth-child(2n) .about_profile_text{left: 0;}
 	
 .about_profile_inner:nth-child(2n) .about_profile_text_inner{padding: 30px 40px 30px 20px ;}
-	
 
-@media only screen and (max-width: 768px){
+
+@media only screen and (max-width: 812px){
 
 	.about_profile_pic {
 		margin-bottom: 15px !important;
@@ -1004,7 +1065,7 @@ and (orientation: landscape) {
 
 .-workshop .course_img {
 	width: 49%;
-	opacity: 0.85;
+	/*opacity: 0.85;*/
 }
 
 .-facilitator .course_img {
@@ -1014,7 +1075,7 @@ and (orientation: landscape) {
 	.course_img:first-child { float: left; }
 	.course_img:last-child { float: right; }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 812px){
 		
 	.course_desc {
 		padding: 20px;
@@ -1063,6 +1124,16 @@ and (orientation: landscape) {
 		font-size: 3rem;
 		line-height: 0.8;
 		margin-bottom: 15px;
+	}
+
+		.date_title .title mark {
+			font-size: 0.75em;
+		}
+
+	.date_title .subtitle {
+		font-size: 1.8rem;
+		font-weight: 500;
+		line-height: 1.4;
 	}
 
 .date_text_inner {
@@ -1149,22 +1220,26 @@ and (orientation: landscape) {
 /* New Price
 -------------------------------------------------- */
 
+/* Everything commented out is format for old version with 2 prices & bubble */
+
 .new_price_container {
-    display: table;
+    /*display: table;*/
+    display: flex; 
     margin-bottom: 15px;
 	position: relative;
-	width: 100%;
+	/*width: 100%;*/
 }
 
 .new_price_inner {
-	display: table-cell;
+	/*display: table-cell;*/
+	margin: 0 auto;
 	position: relative;
 	vertical-align: top;
-	width: 100%;
 }
 
 .new_price_heading {
 	font-size: 4.2rem;
+	text-align: center;
 }
 
 .new_prices {
@@ -1174,13 +1249,20 @@ and (orientation: landscape) {
 }
 
 .new_price {
-	margin-top: 3.25rem;
-	padding-left: 2rem;
+	display: inline-block;
+	/*margin-top: 3.25rem;*/
+	margin-top: 2rem;
+	/*padding-left: 2rem;*/
 }
 
+	.new_price * {
+		display: inline-block;
+	}
+
 .new_price_subheading {
-	font-size: 3.5rem;
-	margin-bottom: 0.2rem;
+	/*font-size: 3.5rem;*/
+	font-size: 4.2rem;
+	/*margin-bottom: 0.2rem;*/
 }
 
 .new_price_amount {
@@ -1235,9 +1317,11 @@ and (orientation: landscape) {
 
 .price_detail {
 	margin-top: 3.25rem;
+	text-align: center;
 }
 
-@media screen and (max-width: 768px){
+
+@media screen and (max-width: 812px){
 
 	/* Date
 	-------------------------------------------------- */
@@ -1248,14 +1332,14 @@ and (orientation: landscape) {
 	}
 
 		.date_title .title {
-			font-size: 2rem;
+			font-size: 1.8rem;
 			line-height: 0.8;
 			margin-bottom: 10px;
 		}
 
 		.date_title .subtitle {
-			font-size: 1.2rem;
-			line-height: 1.5;
+			font-size: 1.3rem;
+			line-height: 1.4;
 		}
 
 	.date_text_inner {
@@ -1346,7 +1430,8 @@ and (orientation: landscape) {
 	}
 
 	.new_price {
-		margin-top: 2.5rem;
+		/*margin-top: 2.5rem;*/
+		margin-top: 2rem;
 		padding-left: 0rem;
 	}
 
@@ -1385,7 +1470,8 @@ and (orientation: landscape) {
 		}
 
 	.price_detail {
-		margin-top: 2.5rem;
+		/*margin-top: 2.5rem;*/
+		margin-top: 2rem;
 	}
 
 }
@@ -1435,7 +1521,7 @@ and (orientation: landscape) {
 	text-align: center;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 812px){
 	.qa_inner {height: auto;}
 		.qa_inner:first-child {margin-bottom: 20px;}
 
@@ -1487,7 +1573,7 @@ and (orientation: landscape) {
 	margin-bottom: 30px;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 812px){
 
 	.profile_heading_container {
 		display: block;
@@ -1540,10 +1626,10 @@ and (orientation: landscape) {
 		font-size: 1.3rem;
 	}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 812px) {
 
 	#footer_button .book_button {
-		padding: 30px 25px;
+		padding: 30px 40px;
 	}
 
 		#footer_button .book_button p {
@@ -1621,7 +1707,7 @@ and (orientation: landscape) {
 	transform: translateY(-25%);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 812px) {
 
 	.footer_content {
 		text-align: center;

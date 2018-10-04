@@ -8,12 +8,12 @@
 
 		<!-- CSS -->
 		<link rel="stylesheet" href="assets/css/pw_style.min.css" />
-		<link rel="stylesheet" href="assets/css/pw_style.css" />
+		<!-- <link rel="stylesheet" href="assets/css/pw_style.css" /> -->
 
 		<!-- JQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="assets/js/pw.min.js"></script>
-		<script src="assets/js/pw.js"></script>
+		<!-- <script src="assets/js/pw.js"></script> -->
 
 		<!-- Typekit -->
 		<script src="https://use.typekit.net/khc7qqj.js"></script>
@@ -60,17 +60,21 @@
 
 			<section id="banner">
 				<div class="bg_container">
-					<div id="mobile_bg"></div>
-					<video autoplay loop muted poster="images/workshop_video.jpg" id="bg_vid">
-						<source src="images/workshop_video.mp4" type="video/mp4">
-						<source src="images/workshop_video.webm" type="video/webm">
-						<source src="images/workshop_video.ogv" type="video/ogg">
+					<!-- <div id="mobile_bg"></div> -->
+					<video playsinline muted autoplay loop id="bg_vid">
+						<source src="images/ws_bg_vid_small.mp4" type="video/mp4">
+						<source src="images/ws_bg_vid_small.webm" type="video/webm">
+						<source src="images/ws_bg_vid_small.ogv" type="video/ogv">
 					</video>
 				</div>
 				
 				<div class="main_title_inner">
 					<img class="logo" src="images/Playfool-Workshop-Logo-Smaller.gif" alt="PLAYFOOL Workshop">
-					<h3 class="h3L lhM">組織の遊び心を呼び起こし、イノベーティブな発想を生み出す<br>ワークショップファシリテーター認定プログラム（大阪編）</h3>
+					<h3 class="h3L lhM">組織の遊び心を呼び起こし、イノベーティブな発想を生み出す<br>ワークショップファシリテーター認定プログラム</h3>
+				</div>
+
+				<div class="gmark">
+					<img src="images/2018_gmark.svg">
 				</div>
 
 				<div class="scroll">
@@ -90,16 +94,19 @@
 							<h2>デザイナーの実践と研究に基づいたエクササイズで<br>
 							好奇心と観察力を取り戻し、創造的な思考力を身につける</h2>
 						</div>
-						<div class="about_text p-spacing pS">
+						<div class="about_text p-spacing">
 							<p>課題が複雑化する現在、さまざまな組織でイノベーションが求められています。イノベーションを生み出すためのフレームワークはいくつも提唱されていますが、組織の風土を変えることなくフレームワークだけを導入しても、組織のひとりひとりに眠っている「創造的なものの見方」を育まなければ、良いアウトプットは期待できません。</p>
 
 							<p>オランダの歴史家であるホイジンガは、著書『ホモ・ルーデンス』の中で、人間の本質は「遊び」にあると述べています。イノベーションを生むためには、子供のころ誰もがそうであったように、固定観念の枠に囚われることなく、いつもとは異なる視点から発想したり、これまで結びつかなかったもの同士を結びつけたりするような、創造的思考が必要です。</p>
 
-							<p>PLAYFOOL Workshop は、遊び心溢れるエクササイズとツールキットを通して、創造的なものの見方を呼び起こすために開発されたワークショッププログラムです。芸術大学の最高峰、英国ロイヤルカレッジオブアート（RCA）出身のクリエイティブユニット「Studio PLAYFOOL」と、ワークショップデザイン研究の第一人者である安斎勇樹（東京大学特任助教・(株)ミミクリデザイン代表）が共同で開発しました。</p>
+							<p>PLAYFOOL Workshop は、遊び心溢れるエクササイズとツールキットを通して、創造的なものの見方を呼び起こすために開発されたワークショッププログラムです。芸術大学の最高峰、英国ロイヤルカレッジオブアート（RCA）出身のクリエイティブユニット「<a href="http://studioplayfool.com/">Studio PLAYFOOL</a>」と、ワークショップデザイン研究の第一人者である安斎勇樹（東京大学特任助教・(株)ミミクリデザイン代表）が共同で開発しました。</p>
 
 							<p>ファシリテーター認定プログラムを受講すれば、あなたも PLAYFOOL Facilitator として、チームやクライアントの創造性を引き出し、イノベーティブなアイデアの創発をファシリテートすることができます。</p>
-
 						</div>
+
+						<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/293051329?color=f32d83&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+						<p class="center"><b>PLAYFOOL Workshop は2018年度グッドデザイン賞を受賞しました。</b></p>
 
 						<canvas class="squiggly_line" style="display: none;"></canvas>
 						<canvas class="squiggly_line"></canvas>
@@ -228,7 +235,7 @@
 
 								<div class="course_img_container">
 									<img class="course_img" src="images/course_img_01.jpg" alt="" />
-									<img class="course_img" src="images/course_img_02.jpg" alt="" />
+									<img class="course_img" src="images/course_img_03.jpg" alt="" />
 								</div>
 
 								<p>PLAYFOOL Workshop では、各エクササイズごとに開発されたツールを用いて、
@@ -299,31 +306,37 @@
 					<div class="block_inner">
 						<div class="title_block">
 							<h1>Pricing</h1>
-							<h2>ファシリテーション研修費（大阪編）</h2>
+							<h2>受講料</h2>
 						</div>
+
+						<!-- ================ Pricing 1 ================ -->
+
+						<h4 class="pink">PLAYFOOL Facilitator 認定講座</h4>
+
+						<p class="center">このプログラムでは、一日目にワークショップを体験、解説を受けた上で、二日目にファシリテーショントレーニングを行います。無事研修を終えられた方には、ツールキットをお渡しし、PLAYFOOL Facilitator として認定いたします。</p>
 
 						<div class="price_dates">
 							<div class="date_container pink_border">
 								<div class="date_title white">
-									<p class="title"><em>Day 1</em></p>
+									<p class="title"><em>Day 1<mark>/2</mark></em></p>
 									<p class="subtitle"><em>PLAYFOOL Workshop</em></p>
 								</div>
 								<div class="date_text_inner">
-										<div class="date_text">
-											<p class="date"><em>7</em>月<em>20</em>日(土)<em>, 10</em>時 — <em>18</em>時</p>
-											<!-- <p class="extra_detail pS lhS">(どちらか都合の良い日をお選びください)</p> -->
-										</div>
+									<div class="date_text">
+										<p class="date"><em>10</em>月<em>27</em>日(土)<em>, 10</em>時 — <em>18</em>時</p>
+										<!-- <p class="extra_detail pS lhS">(どちらか都合の良い日をお選びください)</p> -->
+									</div>
 								</div>
 							</div>
 							<div class="date_container pink_border">
 								<div class="date_title white">
-									<p class="title"><em>Day 2</em>
+									<p class="title"><em>Day 2<mark>/2</mark></em>
 									<p class="subtitle">ファシリテーショントレーニング</p>
 								</div>
 								<div class="date_text_inner">
-										<div class="date_text">
-											<p class="date"><em>7</em>月<em>21</em>日(日)<em>, 10</em>時 — <em>18</em>時</p>
-										</div>
+									<div class="date_text">
+										<p class="date"><em>11</em>月<em>3</em>日(土)<em>, 10</em>時 — <em>18</em>時</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -339,22 +352,77 @@
 										<div class="new_prices">
 											<div class="new_price">
 												<h3 class="new_price_subheading pink">WDA会員:</h3>
-												<h3 class="new_price_amount pink"><em>168,000</em><strong>円</strong><span>(税込)</span></h3>
+												<h3 class="new_price_amount pink"><em>210,000</em><strong>円</strong><span>(税込)</span></h3>
 											</div>
-											<div class="new_price">
+
+											<!-- <div class="new_price">
 												<h3 class="new_price_subheading pink">一般の方:</h3>
-												<h3 class="new_price_amount pink"><em>178,000</em><strong>円</strong><span>(税込)</span></h3>
-											</div>
-											<div class="price_bubble white"><p>大阪<mark>編！</mark></p></div>
+												<h3 class="new_price_amount pink"><em>300,000</em><strong>円</strong><span>(税込)</span></h3>
+											</div> -->
+
+											<!-- <div class="price_bubble white"><p></mark></p></div> -->
+
 										</div>
 
 									</div>
 								</div>
-								<p class="price_detail pS">※全日程参加可能な方のみ、ご参加いただけます。<br> ※今回は大阪会場での実施です。 </p>
+								<p class="price_detail pS">※全日程参加可能な方のみ、ご参加いただけます。 </p>
 							</div>
 						</div>							
 
-						<a href="https://peatix.com/event/385795/view#"><button class="book_button"><p class="white">今すぐ PLAYFOOL <br>Facilitator になる</p></button></a>
+						<button class="book_button"><a href="https://peatix.com/event/435338/view"><p class="white">今すぐ PLAYFOOL <br>Facilitator になる</p></a></button>
+
+
+						<canvas class="squiggly_line"></canvas>
+
+
+						<!-- ================ Pricing 2 ================ -->
+
+						<h4 class="pink">1 Day PLAYFOOL Workshop</h4>
+
+						<p class="center">このプログラムでは、半日でワークショップのみの体験を行います。認定講座を受けるかお悩みの方は、まずこちらを受講してみてください。</p>
+
+						<div class="price_dates">
+							<div class="date_container pink_border">
+								<div class="date_title white">
+									<!-- <p class="title specialPW"><em>PLAYFOOL<br>Workshop</em></p> -->
+									<p class="title"><em>Day 1<mark>/1</mark></em></p>
+									<p class="subtitle"><em>PLAYFOOL Workshop</em></p>
+
+									<!-- <p class="subtitle"><em></em></p> -->
+								</div>
+								<div class="date_text_inner">
+									<div class="date_text">
+										<p class="date"><em>10</em>月<em>14</em>日(日)<em>, 13</em>時 — <em>18</em>時</p>
+										<!-- <p class="extra_detail pS lhS">(どちらか都合の良い日をお選びください)</p> -->
+									</div>
+								</div>
+							</div>
+							
+						</div>
+
+						<div class="price_deal">
+
+							<div class="price_deal_container">
+								<!-- <h3 class="original_price lhS">受講料: <em>160,000</em><strong>円</strong><span>(税込)</span></h3> -->
+								<div class="new_price_container">
+									<div class="new_price_inner">
+										<h3 class="new_price_heading">受講料:</h3>
+
+										<div class="new_prices">
+											<div class="new_price">
+												<h3 class="new_price_subheading pink">WDA会員:</h3>
+												<h3 class="new_price_amount pink"><em>5,000</em><strong>円</strong><span>(税込)</span></h3>
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<p class="price_detail pS">※このワークショップへの参加のみでは、ファシリテーター認定は得られません。</p>
+							</div>
+						</div>							
+
+						<button class="book_button"><a href="https://peatix.com/event/441022/view"><p class="white">今すぐ PLAYFOOL <br>Workshop に参加する</p></a></button>
 
 					</div>
 				</div>
@@ -377,7 +445,7 @@
 							</div>
 							<div class="qa_inner">
 								<div class="A"></div>
-								<p class="a_text">個人の方のワークショップのみの参加は、今回は受け付けておりません。<br>ワークショップを社内研修や出張イベントとして実施することは可能ですので、お気軽にお問い合わせください。</p>
+								<p class="a_text"><a href="https://peatix.com/event/441022/view">こちら</a>の 1 Day PLAYFOOL Workshop にご参加ください。</p>
 							</div>
 						</div>
 						
@@ -386,11 +454,11 @@
 						<div class="question_answer">
 							<div class="qa_inner">
 								<div class="Q pink"></div>
-								<p class="q_text pink pXL">以前PLAYFOOL Workshopを体験したのですが、もう一度参加する必要はありますか。</p>
+								<p class="q_text pink pXL">以前 PLAYFOOL Workshop を体験したのですが、もう一度参加する必要はありますか。</p>
 							</div>
 							<div class="qa_inner">
 								<div class="A"></div>
-								<p class="a_text">以前にPLAYFOOL Workshopに参加された方も、もう一度ご参加ください。プログラムが更新されている場合があります。また、ワークショップ体験の鮮明な記憶がある状態で認定講座を受けることで、より効果的に学ぶことができます。</p>
+								<p class="a_text">以前に PLAYFOOL Workshop に参加された方も、もう一度ご参加ください。プログラムが更新されている場合があります。また、ワークショップ体験の鮮明な記憶がある状態で認定講座を受けることで、より効果的に学ぶことができます。</p>
 							</div>
 						</div>
 						
@@ -403,7 +471,7 @@
 							</div>
 							<div class="qa_inner">
 								<div class="A"></div>
-								<p class="a_text">関西での次回開催は未定です。ご要望があれば、ぜひ<a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#x73;&#x69;&#x6f;&#110;&#64;&#109;&#x69;&#x6d;&#105;&#x63;&#114;&#x79;&#x64;&#101;&#115;&#x69;&#x67;&#110;&#x2e;&#x63;&#x6f;&#x2e;&#106;&#x70;">こちら</a>のアドレスまで、ご連絡ください。</p>
+								<p class="a_text">次回は東京にて1-2月に開催を予定しております。<a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#x73;&#x69;&#x6f;&#110;&#64;&#109;&#x69;&#x6d;&#105;&#x63;&#114;&#x79;&#x64;&#101;&#115;&#x69;&#x67;&#110;&#x2e;&#x63;&#x6f;&#x2e;&#106;&#x70;">こちら</a>にアドレスを登録していただければ優先的にご案内致します。</p>
 							</div>
 						</div>
 
@@ -432,21 +500,8 @@
 								<p class="a_text">講座をキャンセルされる場合には、キャンセル料が発生いたします。申し込み前に必ずご確認ください。<br>
 								・連絡なしの不参加の場合：受講料の100%<br>
 								・5日前～当日のキャンセルの場合：受講料の100％<br>
-								・それ以前のキャンセル(5月6日まで)：無料
+								・それ以前のキャンセル(10月22日まで)：無料
 								</p>
-							</div>
-						</div>
-
-						<canvas class="squiggly_line"></canvas>
-
-						<div class="question_answer">
-							<div class="qa_inner">
-								<div class="Q pink"></div>
-								<p class="q_text pink pXL"> 東京での次回の開催予定を教えてください。</p>
-							</div>
-							<div class="qa_inner bullet_points">
-								<div class="A"></div>
-								<p class="a_text">次回は東京にて8-9月に開催を予定しております。<a href="https://docs.google.com/forms/d/e/1FAIpQLSdBYZis0RpLocTs6ErkOUiZMSb5-TxP1QEFMZyaJC67p4BNXg/viewform">こちら</a>にアドレスを登録していただければ優先的にご案内致します。</p>
 							</div>
 						</div>
 
@@ -473,7 +528,7 @@
 							</div>
 						</div>
 
-						<p class="profile_text">英国ロイヤルカレッジオブアート出身のダニエル・コッペンと丸山紗季によるクリエイティブユニット。「遊び」がイノベーションをうむとの信念のもと、分野横断的な自由な視点で、新しい見方や体験を生み出すプロダクトのデザインを行う。主な作品に、来る食糧危機をテーマに、少ない量の食料でも満腹感を与える食器《HALF/FULL》や、人工知能との新しい関係性を提案したランプ《Lulu, the little lamp that learns》がある。イベントでの講演や Dezeen 等海外メディア掲載多数。</p>
+						<p class="profile_text"><a href="http://studioplayfool.com/">Studio PLAYFOOL</a> は、英国ロイヤルカレッジオブアート出身のダニエル・コッペンと丸山紗季によるクリエイティブユニット。「遊び」がイノベーションをうむとの信念のもと、分野横断的な自由な視点で、新しい見方や体験を生み出すプロダクトのデザインを行う。主な作品に、来る食糧危機をテーマに、少ない量の食料でも満腹感を与える食器《HALF/FULL》や、人工知能との新しい関係性を提案したランプ《Lulu, the little lamp that learns》がある。イベントでの講演や Dezeen 等海外メディア掲載多数。</p>
 
 						<canvas class="squiggly_line"></canvas>
 
@@ -497,7 +552,7 @@
 			<section id="footer_button" class=" wrapper grey_bg">
 				<div class="block">
 					<!-- <div class="block_inner"> -->
-						<a href="https://peatix.com/event/385795/view#"><button class="book_button"><p class="white">今すぐ PLAYFOOL <br>Facilitator になる</p></button></a>
+						<a href="https://peatix.com/event/435338/view"><button class="book_button"><p class="white">今すぐ PLAYFOOL Facilitator になる</p></button></a>
 					<!-- </div> -->
 				</div>
 
