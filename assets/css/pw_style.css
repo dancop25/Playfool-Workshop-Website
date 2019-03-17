@@ -64,8 +64,8 @@ html{
 body {
 	background-color: #fff;
 	color: #503157;
-	font-family: YuGothic, "Yu Gothic", "vdl-v7gothic" ,sans-serif;
-	font-family: "sofia-pro", sans-serif;
+	font-family: vdl-v7gothic, sans-serif;
+	font-family: sofia-pro, sans-serif;
 	font-size: 1.6rem;
 	font-style: normal;
 	font-weight: 500;
@@ -96,7 +96,10 @@ p {
 	line-height: 1.8;
 }
 
+#en p { line-height: 1.7; }
+
 	.p-spacing p:not(:last-child) {margin-bottom: 20px;}
+	#en .p-spacing p:not(:last-child) {margin-bottom: 16px;}
 	
 	p.lhS {line-height: 1;}
 	p.lhM {line-height: 1.8;}
@@ -182,6 +185,7 @@ h3 {
 }
 
 	.h3XXXS h3, .h3XXXS {font-size: 1.8rem;}
+	#en .h3XXXS h3, #en .h3XXXS {font-size: 2.0rem;}
 	.h3XXS h3, .h3XXS {font-size: 2.0rem;}
 	.h3SS h3, .h3XS {font-size: 2.2rem;}
 	.h3S h3, .h3S {font-size: 2.4rem;}
@@ -192,11 +196,13 @@ h3 {
 	h3.lhXS {line-height: 1;}
 	h3.lhS {line-height: 1.4;}
 	h3.lhM {line-height: 1.7;}
+	#en h3.lhM {line-height: 1.6;}
 
 	@media screen and (max-width: 812px) {
 		h3 {font-size: 2.4rem;}
 
 		.h3XXXS h3, .h3XXXS {font-size: 1.6rem;}
+		#en .h3XXXS h3, #en .h3XXXS {font-size: 1.7rem;}
 		.h3XXS h3, .h3XXS {font-size: 1.6rem;}
 		.h3SS h3, .h3XS {font-size: 2.0rem;}
 		.h3S h3, .h3S {font-size: 2.2rem;}
@@ -481,10 +487,6 @@ Grad. Purple: #381c3e*/
 		line-height: 1.4;
 	}
 
-	.book_button br {
-		display: none;
-	}
-
 	.book_button:hover {
 		opacity: 0.7;
 		-moz-transition: opacity 0.5s ease;
@@ -507,24 +509,50 @@ Grad. Purple: #381c3e*/
 		width: 1.5em;
 	}
 
+.button_pair {
+	display: flex;
+}
+
+.button_pair {
+	display: flex;
+}
+
+	.button_pair > * {
+		width: 100%;
+	}
+
+		.button_pair > *:first-child {
+			margin-right: 30px;
+		}
+
+.button_disabled {
+	opacity: 0.7;
+	pointer-events: none;
+}
+
 
 @media screen and (max-width: 812px){
 
 	.book_button {
-		padding: 15px 25px;
+		padding: 15px 20px;
 	}
 
 		.book_button p {
 			font-size: 1.4em;
 		}
 
-		.book_button br {
-			display: block;
-		}
-
 		.book_button:after {
 			font-size: 0.7rem;
 			right: 2.2em;
+		}
+
+	.button_pair {
+		display: block;
+	}
+
+	.button_pair > *:first-child {
+			margin-bottom: 15px;
+			margin-right: 0;
 		}
 }
 
@@ -710,11 +738,17 @@ Grad. Purple: #381c3e*/
 		margin-bottom: 30px;
 	}
 
+	#en .title_block h2 {
+		font-size: 2.6rem;
+		font-weight: 500;
+		line-height: 1.4;
+	}
+
 	.title_block:after {
 		background-color: #503157;
 		content: "";
 		display: block;
-		height: 3x;
+		height: 3px;
 		opacity: 0.4;
 		width: 50px;	
 	}
@@ -794,9 +828,15 @@ Grad. Purple: #381c3e*/
 		z-index: 1;
 	}
 
+	#en .main_title_inner h3 {
+		font-weight: 500;
+	}
+
+	@media screen and (max-width: 1100px) { #en .main_title_inner br { display: none; } }
+
 .gmark {
 	left: 0;
-	padding: 40px;
+	margin: 40px;
 	position: absolute;
 	top: 0;
 }
@@ -804,6 +844,31 @@ Grad. Purple: #381c3e*/
 	.gmark img {
 		width: 240px;
 	}
+
+.lang-icon {
+	margin: 40px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 2000;
+}
+
+	.lang-icon a {
+		border-bottom: none;
+	}
+
+	.lang-icon a:hover {
+		opacity: 0.7;
+		-moz-transition: opacity 0.5s ease;
+		-webkit-transition: opacity 0.5s ease;
+		-ms-transition: opacity 0.5s ease;
+		transition: opacity 0.5s ease;
+	}
+
+		.lang-icon a img {
+			width: 45px;
+		}
+
 
 .scroll {
 	-webkit-animation: fadeIn 1s ease-in-out 2s forwards, slideIn 1s ease-in-out 2s forwards;
@@ -844,6 +909,9 @@ Grad. Purple: #381c3e*/
 	}
 
 	.main_title_inner {
+		-webkit-animation: none;
+		animation: none;
+		opacity: 1;
 		margin: 0 auto 15px auto;
 		max-width: 560px;
 	}
@@ -865,17 +933,27 @@ Grad. Purple: #381c3e*/
 		}
 
 	.gmark {
-		padding: 20px;
-		right: 0;
+		margin: 25px;
 	}
 
 		.gmark img {
 			width: 150px;
 		}
 
+	.lang-icon {
+		margin: 25px;
+	}
+
+		.lang-icon a img {
+			width: 40px;
+		}
+
 	.scroll {
+		-webkit-animation: none;
+		animation: none;
 		bottom: 30px;
-		font-size: 0.8rem;			
+		font-size: 0.8rem;	
+		opacity: 1;		
 	}
 		
 		.scroll h3 {
@@ -999,6 +1077,10 @@ and (orientation: landscape) {
 .about_profile_text_inner {
 	max-width: 340px;
 	padding: 30px 20px 30px 40px;
+}
+
+#en .about_profile_text_inner {
+	max-width: 400px;
 }
 
 .about_profile_title {
@@ -1146,6 +1228,7 @@ and (orientation: landscape) {
 	align-self: center;
 	line-height: 100%;
 	margin: 0 auto;
+	padding: 15px;
 	text-align: center;
 }
 
@@ -1156,13 +1239,14 @@ and (orientation: landscape) {
 		line-height: 0.75;
 		position: relative;
 	}
+
+		.date_text .date.notice {
+			font-size: 2.2rem;
+			line-height: 1.6;
+		}
 		
 		.date_text .date em {
 			font-weight: 500;
-		}
-
-		.date_text .date br {
-			display: none;
 		}
 
 		.date_text .extra_detail {
@@ -1173,6 +1257,7 @@ and (orientation: landscape) {
 	border: 3px solid #f32d83;
 	padding: 70px 60px;
 	position: relative;
+	text-align: center;
 }
 
 .price_deal_container {
@@ -1239,7 +1324,6 @@ and (orientation: landscape) {
 
 .new_price_heading {
 	font-size: 4.2rem;
-	text-align: center;
 }
 
 .new_prices {
@@ -1251,8 +1335,12 @@ and (orientation: landscape) {
 .new_price {
 	display: inline-block;
 	/*margin-top: 3.25rem;*/
-	margin-top: 2rem;
+	margin-top: 20px;
 	/*padding-left: 2rem;*/
+}
+
+#en .new_price {
+	margin-top: 25px;
 }
 
 	.new_price * {
@@ -1263,6 +1351,16 @@ and (orientation: landscape) {
 	/*font-size: 3.5rem;*/
 	font-size: 4.2rem;
 	/*margin-bottom: 0.2rem;*/
+}
+
+#en .new_price_heading, #en .new_price_subheading {
+	font-size: 3.6rem;
+}
+
+#en .new_price_subheading {
+	display: block;
+	font-weight: 500;
+	text-align: left;
 }
 
 .new_price_amount {
@@ -1316,9 +1414,15 @@ and (orientation: landscape) {
 		}
 
 .price_detail {
-	margin-top: 3.25rem;
+	margin-top: 32.5px;
 	text-align: center;
 }
+
+#en .price_detail {
+	margin-top: 25px;
+	text-align: center;
+}
+
 
 
 @media screen and (max-width: 812px){
@@ -1346,22 +1450,23 @@ and (orientation: landscape) {
 		width: 50%;
 	}
 
-	.date_text {
-		padding: 15px;
+	.date_text .date {
+		font-size: 1.8rem;
+		line-height: 1.5;
 	}
 
-		.date_text .date {
-			font-size: 1.8rem;
+		.date_text .date.notice {
+			font-size: 1.2rem;
 			line-height: 1.5;
 		}
 
-			.date_text .date br {
-				display: block;
-			}
+		.date_text .date br {
+			display: none;
+		}
 
-			.date_text .extra_detail {
-				margin-top: 10px;
-			}
+		.date_text .extra_detail {
+			margin-top: 10px;
+		}
 
 	.extra_detail {
 		font-size: 1rem;
@@ -1374,7 +1479,6 @@ and (orientation: landscape) {
 
 	.price_deal {
 		padding: 30px 15px;
-		text-align: center;
 	}
 
 	.price_deal_container {
@@ -1431,13 +1535,25 @@ and (orientation: landscape) {
 
 	.new_price {
 		/*margin-top: 2.5rem;*/
-		margin-top: 2rem;
-		padding-left: 0rem;
+		margin-top: 20px;
+		padding-left: 0;
+	}
+
+	#en .new_price {
+		margin-top: 20px;
 	}
 
 	.new_price_subheading {
 		font-size: 2.2rem;
 		margin-bottom: 0.2rem;
+	}
+
+	#en .new_price_heading, #en .new_price_subheading {
+		font-size: 2.2rem;
+	}
+
+	#en .new_price_subheading {
+		display: inline-block;
 	}
 
 	.new_price_amount {
@@ -1471,7 +1587,7 @@ and (orientation: landscape) {
 
 	.price_detail {
 		/*margin-top: 2.5rem;*/
-		margin-top: 2rem;
+		margin-top: 20px;
 	}
 
 }
@@ -1610,6 +1726,7 @@ and (orientation: landscape) {
 }
 
 #footer_button .block {
+	background-color: transparent;
 	padding: 0;
 }
 
@@ -1619,7 +1736,11 @@ and (orientation: landscape) {
 }
 
 	#footer_button .book_button p {
-		font-size: 3rem;
+		font-size: 2.6rem;
+	}
+
+	#footer_button .book_button br {
+		display: block;
 	}
 
 	#footer_button .book_button:after {
@@ -1628,13 +1749,22 @@ and (orientation: landscape) {
 
 @media screen and (max-width: 812px) {
 
+	#footer_button .block {
+		display: block;
+	}
+
+		#footer_button .block > *:first-child {
+			margin-right: 0;
+			margin-bottom: 15px;
+		}
+
 	#footer_button .book_button {
-		padding: 30px 40px;
+		padding: 30px 30px;
 	}
 
 		#footer_button .book_button p {
-			font-size: 2rem;
-		}
+			font-size: 1.8rem;
+		}	
 
 		#footer_button .book_button:after {
 			font-size: 1rem;

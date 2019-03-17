@@ -98,6 +98,21 @@ $(document).ready(function() {
 	};
 
 
+	// Change font size for en website
+	function enFontSize() {
+		var fontSizeFactor = 1.1;
+		if (($('body#en').length > 0)) {
+			console.log
+			$('body').find('p, a, li').each(function() {
+				var fontSize = $(this).css('font-size');
+				var newFontSize = parseInt(fontSize,10) * fontSizeFactor; 
+				$(this).css('font-size', newFontSize);
+			});
+		};
+	};
+	enFontSize();
+
+
 // Calling Functions
 // ------------------------------------
 
