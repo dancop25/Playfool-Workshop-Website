@@ -115,6 +115,7 @@ p {
 		p {font-size: 1.2rem;}
 
 			.p-spacing p:not(:last-child) {margin-bottom: 12px;}
+			#en .p-spacing p:not(:last-child) {margin-bottom: 12px;}
 			
 			.pS *, .pS p, .pS {font-size: 1.2rem;}
 			.pM *, .pM p, .pM {font-size: 1.4rem;}
@@ -152,7 +153,7 @@ a {
 	}
 
 strong, b {font-weight: 700;}
-i {font-style: italic;}
+i {font-style: italic; font-weight: 500;}
 .center { text-align: center; }
 
 mark {
@@ -739,7 +740,7 @@ Grad. Purple: #381c3e*/
 	}
 
 	#en .title_block h2 {
-		font-size: 2.6rem;
+		font-size: 2.8rem;
 		font-weight: 500;
 		line-height: 1.4;
 	}
@@ -772,6 +773,10 @@ Grad. Purple: #381c3e*/
 			font-size: 1.8rem;
 			line-height: 1.6;
 			margin-bottom: 15px;
+		}
+
+		#en .title_block h2 {
+			font-size: 1.8rem;
 		}
 
 		.title_block:after {
@@ -816,7 +821,7 @@ Grad. Purple: #381c3e*/
 }
 
 	.main_title_inner *:first-child{
-		margin-bottom: 60px;
+		margin-bottom: 100px;
 	}
 
 	.main_title_inner .logo {
@@ -824,7 +829,7 @@ Grad. Purple: #381c3e*/
 		opacity: 1;
 		outline: 1px solid transparent;
 		position: relative;
-		width: 280px;
+		width: 650px;
 		z-index: 1;
 	}
 
@@ -912,12 +917,16 @@ Grad. Purple: #381c3e*/
 		-webkit-animation: none;
 		animation: none;
 		opacity: 1;
-		margin: 0 auto 15px auto;
+		margin: 0 auto;
 		max-width: 560px;
 	}
 
 		.main_title_inner *:first-child{
-			margin-bottom: 30px;
+			margin-bottom: 40px;
+		}
+
+		.main_title_inner .logo {
+			width: 100%;
 		}
 
 		.main_title_inner .h3L{
@@ -927,10 +936,6 @@ Grad. Purple: #381c3e*/
 			.main_title_inner .h3L br {
 				display: none;
 			}
-
-		.main_title_inner .logo {
-			width: 160px;
-		}
 
 	.gmark {
 		margin: 25px;
@@ -968,12 +973,12 @@ Grad. Purple: #381c3e*/
 @media screen and (max-width: 812px) 
 and (orientation: landscape) {
 
-	.main_title_inner {
-		margin: 0 auto 30px auto;
-	}
-
 		.main_title_inner *:first-child{
 			margin-bottom: 20px;
+		}
+
+		.main_title_inner .logo {
+			width: 280px;
 		}
 
 		.main_title_inner .h3L{
@@ -1145,6 +1150,10 @@ and (orientation: landscape) {
 		margin-bottom: 20px;
 	}
 
+	#en .-workshop .course_img_container {
+		margin-top: 4px;
+	}
+
 .-workshop .course_img {
 	width: 49%;
 	/*opacity: 0.85;*/
@@ -1168,9 +1177,23 @@ and (orientation: landscape) {
 		margin-bottom: 12px;
 	}
 
-	.-workshop .course_img_container {
+		.-workshop .course_img_container {
+			margin-bottom: 12px;
+		}
+
+		#en .-workshop .course_img_container {
+			margin-top: 0px;
+		}
+
+	.-workshop .course_img {
+		width: 100%;
+	}
+
+	.-workshop .course_img:not(:last-child) {
 		margin-bottom: 12px;
 	}
+
+
 
 }
 
